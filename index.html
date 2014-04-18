@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Thinkful Toggle Bookmark</title>
+	<link href="http://fonts.googleapis.com/css?family=Cabin:600" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Thinkful Toggle Bookmarklet</h1>
+			<p>A bookmarklet for keeping yourself honest.</p>
+		</header>
+		<section class="content">
+			<p>Drag this to Bookmarks Bar &rarr; <a class="bookmarklet" href="javascript:(function ($) {$('<div />', {'class': 'button-container', 'css': {float: 'none'} }).append($('<button />', {text: 'Toggle Answer', click: function (e) {e.preventDefault(); var pre = $(this).parent().next('pre'), visible = pre.is(':visible'); if (visible) pre.hide(); else pre.show(); } })).insertBefore('pre'); $('pre').hide(); })(jQuery);">
+		Toggle Answer</a></p>
+			<p>Use this bookmarklet to show and hide the answers throughout the thinkful course.</p>
+			<p>If you find pages it doesn't work <a href="https://github.com/webbushka/thinkful-toggle-bookmarklet">fork it on Github</a>, fix it and create a pull request. Or create an issue and I'll get to it when I can</p>
+		</section>
+
+		<footer>
+			<p>Brought to you by <a href="http://ajwebb.me">AJ Webb</a>, and hopefully more people.</p>
+			<p><small>(Chrome Extension Coming Soon)</small></p>
+		</footer>
+	</div>
+</body>
+</html>
